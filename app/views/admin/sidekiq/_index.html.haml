@@ -1,0 +1,9 @@
+#sidekiq-container.container
+  %iframe#sidekiq-frame{'frameBorder' => 0, 'src' => '/monitoring/sidekiq'}
+
+:javascript
+  var frame = $('#sidekiq-frame');
+  frame.on('load', function () {
+      frame.css('min-height', $(window).height());
+      frame.css('min-width', $('#sidekiq-container').width());
+  });

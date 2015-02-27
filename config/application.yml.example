@@ -1,0 +1,16 @@
+# The following settings will be used to configure the stack
+application:
+  name: 'Application'
+sidekiq:
+  redis: 'redis://localhost:6379'
+
+le:
+  token: ''
+
+mandrill:
+  mail_from: 'Support <support@example.com>'
+  reply_to: 'No Reply <noreply@example.com>'
+  host: 'smtp.mandrillapp.com'
+  port: 587
+  user_name: ''
+  api_key: ''

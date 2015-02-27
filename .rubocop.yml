@@ -1,0 +1,95 @@
+AllCops:
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/**/*'
+    - 'spec/rails_helper.rb'
+    - 'spec/spec_helper.rb'
+    - 'node_modules/**/*'
+
+Metrics/LineLength:
+  Enabled: false
+
+Lint/AssignmentInCondition:
+  Enabled: true
+
+Lint/DeprecatedClassMethods:
+  Enabled: true
+
+Lint/ShadowingOuterLocalVariable:
+  Enabled: true
+
+Lint/UnusedBlockArgument:
+  Enabled: true
+
+Style/AccessorMethodName:
+  Enabled: true
+
+Style/BlockComments:
+  Enabled: true
+
+Style/BracesAroundHashParameters:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: true
+
+Style/EmptyLinesAroundModuleBody:
+  Enabled: true
+
+Style/GuardClause:
+  Enabled: true
+
+Style/HashSyntax:
+  Enabled: true
+
+Style/IfUnlessModifier:
+  Enabled: true
+
+Style/IndentHash:
+  Enabled: true
+
+Style/Next:
+  Enabled: true
+
+Style/PercentLiteralDelimiters:
+  Enabled: true
+
+Style/Proc:
+  Enabled: true
+
+Style/RedundantReturn:
+  Enabled: true
+
+Style/SingleSpaceBeforeFirstArg:
+  Enabled: true
+
+Style/SpaceAroundOperators:
+  Enabled: true
+
+Style/SpaceBeforeBlockBraces:
+  Enabled: true
+
+Style/AndOr:
+  Enabled: false
+
+Style/SpaceInsideBlockBraces:
+  Enabled: true
+
+Style/SpaceInsideBrackets:
+  Enabled: true
+
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Style/StringLiterals:
+  Enabled: true
+
+Style/TrailingBlankLines:
+  Enabled: false
+
+Style/TrailingWhitespace:
+  Enabled: true
