@@ -17,12 +17,12 @@ Doorkeeper.configure do
     user
   end
 
-  # If you want to restrict access to the web interface for adding oauth authorized applications, you need to declare the block below.
+  # If you want to restrict access to the web interface for adding oauth authorized applications,
+  # you need to declare the block below.
   admin_authenticator do
-    unless current_user && current_user.try(:admin?)
-      reset_session
-      redirect_to '/admin/login'
-    end
+    return true if current_user && current_user.try(:admin?)
+    reset_session
+    redirect_to '/admin/login'
   end
 
   # Authorization Code expiration time (default 10 minutes).

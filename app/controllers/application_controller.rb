@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def authenticate_admin_user!
-    false unless current_user && current_user.try(:admin?)
+    return true if current_user && current_user.try(:admin?)
     reset_session
     redirect_to '/admin/login'
   end
