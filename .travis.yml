@@ -6,6 +6,10 @@ rvm:
 addons:
   postgresql: '9.3'
 
+before_install:
+  - sudo apt-get update -y
+  - sudo apt-get install imagemagick -y
+
 script:
   - RAILS_ENV=test bundle exec rake db:migrate
   - RAILS_ENV=test bundle exec rake spec

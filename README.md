@@ -2,6 +2,7 @@ Rails API
 =========
 
 [![Build Status](https://travis-ci.org/alankehoe/rails-api.svg?branch=master)](https://travis-ci.org/alankehoe/rails-api)
+[![Dependency Status](https://gemnasium.com/alankehoe/rails-api.svg)](https://gemnasium.com/alankehoe/rails-api)
 
 # Getting started
 
