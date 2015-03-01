@@ -3,6 +3,9 @@ language: ruby
 rvm:
   - 2.0.0-p481
   
+env:
+  - RAILS_ENV=test
+  
 addons:
   postgresql: '9.3'
 
@@ -11,9 +14,9 @@ before_install:
   - sudo apt-get install imagemagick -y
 
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate
-  - RAILS_ENV=test bundle exec rake spec
-  - RAILS_ENV=test bundle exec rubocop --format fuubar
+  - bundle exec rake db:migrate
+  - bundle exec rake spec
+  - bundle exec rubocop --format fuubar
 
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
