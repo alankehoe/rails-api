@@ -3,9 +3,9 @@ class CreateMemberships < ActiveRecord::Migration
     create_table :memberships, id: :uuid do |t|
       t.string :permission
 
-      t.uuid       :user_id
-      t.uuid       :group_id
-      t.timestamps
+      t.uuid :user_id
+      t.uuid :group_id
+      t.timestamps null: false
     end
   end
 end

@@ -6,9 +6,8 @@ AllCops:
     - 'db/**/*'
     - 'config/**/*'
     - 'bin/**/*'
-    - 'spec/rails_helper.rb'
+    - 'vendor/**/*'
     - 'spec/spec_helper.rb'
-    - 'node_modules/**/*'
 
 Metrics/LineLength:
   Enabled: false

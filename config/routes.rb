@@ -7,14 +7,14 @@ Rails.application.routes.draw do
   #
   devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes self
-  
+
   #
   # Sidekiq
   #
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/monitoring/sidekiq'
   end
-  
+
   #
   # Doorkeeper for OAuth 2
   #
