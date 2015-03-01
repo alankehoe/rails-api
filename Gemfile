@@ -44,13 +44,17 @@ gem 'sidekiq'
 gem 'sidetiq'
 gem 'sinatra', '>= 1.3.0', require: false
 
+# Redis
+gem 'redis-sentinel'
+
 # OAuth
 gem 'doorkeeper'
+
+# Authentication
 gem 'devise'
 
 # JSON API
 gem 'rabl'
-gem 'apipie-rails'
 
 # Uploads
 gem 'fog'
