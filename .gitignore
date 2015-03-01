@@ -11,6 +11,7 @@
 /log/*.log
 /tmp
 
+*.iml
 /.idea
 /coverage
 

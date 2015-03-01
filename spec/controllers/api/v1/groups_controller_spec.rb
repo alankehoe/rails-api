@@ -5,8 +5,8 @@ RSpec.describe Api::V1::GroupsController, type: :controller do
 
   let(:user) { FactoryGirl.create :user }
   let(:group) { FactoryGirl.create :group }
-  let(:token) { double :accessible? => true, :resource_owner_id => user.id }
-
+  let(:token) { double Doorkeeper::AccessToken, acceptable?: true, resource_owner_id: user.id }
+  
   before :each do
     allow(controller).to receive(:doorkeeper_token) { token }
     request.accept = 'application/json'
