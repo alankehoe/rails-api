@@ -1,0 +1,16 @@
+language: ruby
+
+rvm:
+  - 2.0.0-p481
+
+env:
+  - DB=postgresql
+
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate
+  - RAILS_ENV=test bundle exec rake spec
+
+before_script:
+  - psql -c 'CREATE USER application CREATEDB'
+  - psql -c 'ALTER USER application WITH SUPERUSER'
+  - psql -c 'CREATE DATABASE application_test OWNER application'
