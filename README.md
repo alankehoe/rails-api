@@ -1,6 +1,8 @@
 Rails API
 =========
 
+[![Build Status](https://travis-ci.org/alankehoe/rails-api.svg?branch=master)](https://travis-ci.org/alankehoe/rails-api)
+
 # Getting started
 
 ## 1. System setup
