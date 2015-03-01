@@ -7,9 +7,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def authenticate_admin_user!
-    unless current_user && current_user.try(:admin?)
-      reset_session
-      redirect_to '/admin/login'
-    end
+    false unless current_user && current_user.try(:admin?)
+    reset_session
+    redirect_to '/admin/login'
   end
 end

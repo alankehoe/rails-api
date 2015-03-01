@@ -19,7 +19,7 @@ module Api
         @user = User.create! user_params
         respond_with @user
       end
-      
+
       def update
         @user.update! user_params
         respond_with @user

@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   it 'should have many memberships' do
     should have_many :memberships
   end
@@ -17,7 +16,6 @@ RSpec.describe User, type: :model do
   end
 
   describe 'Authentication method' do
-
     let(:user) { FactoryGirl.create :user }
 
     it 'Should authenticate a user' do

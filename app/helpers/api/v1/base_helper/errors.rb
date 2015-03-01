@@ -36,7 +36,7 @@ module Api
         # @param messages [Array] errors array
         # @param *args [Array] optional extra errors
         def render_unprocessable_request(messages = [], *args)
-          render @format => {messages: join_errors(messages, args) || []} , status: :unprocessable_entity
+          render @format => {messages: join_errors(messages, args) || []}, status: :unprocessable_entity
         end
 
         private

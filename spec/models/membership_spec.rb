@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Membership, type: :model do
-
   it 'should belong to users' do
     should belong_to :user
   end
@@ -15,5 +14,4 @@ RSpec.describe Membership, type: :model do
 
     expect(membership).to be_valid
   end
-
 end

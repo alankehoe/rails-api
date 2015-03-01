@@ -7,6 +7,5 @@ class MyWorker
   sidekiq_options queue: :schedueled
 
   def perform
-
   end
 end
