@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   #
   # Doorkeeper for OAuth 2
   #
-  use_doorkeeper { skip_controllers :authorizations, :authorized_applications }
+  use_doorkeeper
 
   #
   # Api Resources
