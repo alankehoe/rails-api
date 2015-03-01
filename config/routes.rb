@@ -3,13 +3,17 @@ require 'sidetiq/web'
 
 Rails.application.routes.draw do
   #
-  # Active Admin & Sidekiq
+  # Active Admin & Devise
   #
   devise_for :users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes self
+  
+  #
+  # Sidekiq
+  #
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/monitoring/sidekiq'
   end
-  ActiveAdmin.routes(self)
   
   #
   # Doorkeeper for OAuth 2
